@@ -8,8 +8,6 @@ $(document).ready(function() {
     
     initialScreen();
     
-    //Create a function, generateHTML(), that is triggered by the start button, and generates the HTML seen on the project video...
-    
     $("body").on("click", ".start-button", function(event){
         event.preventDefault();  
         clickSound.play();
@@ -24,13 +22,13 @@ $(document).ready(function() {
         clickSound.play();
         selectedAnswer = $(this).text();
         if(selectedAnswer === correctAnswers[questionCounter]) {
-            //alert("correct");
+            
     
             clearInterval(theClock);
             generateWin();
         }
         else {
-            //alert("wrong answer!");
+            
             clearInterval(theClock);
             generateLoss();
         }
@@ -54,14 +52,14 @@ $(document).ready(function() {
         correctTally++;
         gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Correct! The answer is: " + correctAnswers[questionCounter] + "</p>" + imageArray[questionCounter];
         $(".mainArea").html(gameHTML);
-        setTimeout(wait, 4000);  //  change to 4000 or other amount
+        setTimeout(wait, 4000);  
     }
     
     function generateLoss() {
         incorrectTally++;
         gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: "+ correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='assets/images/x.png'>";
         $(".mainArea").html(gameHTML);
-        setTimeout(wait, 4000); //  change to 4000 or other amount
+        setTimeout(wait, 4000); 
     }
     
     function generateHTML() {
