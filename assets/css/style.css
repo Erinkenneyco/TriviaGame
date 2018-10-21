@@ -48,4 +48,17 @@
     background-color: #DD0506;
     color: white;
   }
+
+  .center-block {
+    width:350px;
+    height:450px;
+
+  }
  
+  #footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:30px;
+    text-align:center;
+  }

@@ -11,7 +11,7 @@ $(document).ready(function() {
     //Create a function, generateHTML(), that is triggered by the start button, and generates the HTML seen on the project video...
     
     $("body").on("click", ".start-button", function(event){
-        event.preventDefault();  // added line to test issue on GitHub Viewer
+        event.preventDefault();  
         clickSound.play();
         generateHTML();
     
@@ -65,7 +65,7 @@ $(document).ready(function() {
     }
     
     function generateHTML() {
-        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>30</span></p><p class='text-center'>" + questionArray[questionCounter] + "</p><p class='first-answer answer'>A. " + answerArray[questionCounter][0] + "</p><p class='answer'>B. "+answerArray[questionCounter][1]+"</p><p class='answer'>C. "+answerArray[questionCounter][2]+"</p><p class='answer'>D. "+answerArray[questionCounter][3]+"</p>";
+        gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>30</span></p><p class='text-center'>" + questionArray[questionCounter] + "</p><p class='first-answer answer'>A. " + answerArray[questionCounter][0] + "</p><p class='answer'>B. "+answerArray[questionCounter][1]+"</p><p class='answer'>C. "+answerArray[questionCounter][2]+"</p><p class='answer'>D. "+ answerArray[questionCounter][3]+"</p>";
         $(".mainArea").html(gameHTML);
     }
     
@@ -115,7 +115,7 @@ $(document).ready(function() {
     var counter = 30;
     var questionArray = ["What planet is Peter Quill from?", "What color is Gamora's skin?", "Who killed Drax the Destroyers family?", "What is Rocket's Species?", "What is Groot's catchphrase", "What is Yondu's weapon of choice?", "What is Peter Quills Alias?", "How many core members make up the Guardians of the Galaxy?"];
     var answerArray = [["Xandar", "Terra", "Knowhere", "Berhert"], ["Blue","Yellow","Green","Pink"], ["Thanos", "Iron Man", "Rocket", "Ronan the Accuser"], ["Trash Panda","Raccoon","Human","Xandarian"], ["I am Groot", "Bazinga", "Did I do That?", "Dy-No-Mite!"], ["Axe","Stormbreaker","Arrow","Sword"], ["Star Lord", "Star Prince", "Star Munch", "Tazer-face"], ["5","10","7","9"]];
-    var imageArray = ["<img class='center-block img-right' src='assets/images/2e68c2a499536c5dd956816893d3af26.png'>", "<img class='center-block img-right'src='assets/images/guardians_of_the_galaxy_vol_2___gamora_png__by_mintmovi3-db4msbe.png'>", "<img class='center-block img-right'src='assets/images/guardians-of-the-galaxy-clipart-3.png'>", "<img class='center-block img-right'src='assets/images/kisspng-rocket-raccoon-baby-groot-gamora-marvel-comics-guardians-of-the-galaxy-5ac6fc0461e4c7.203584221522990084401.png'>", "<img class='center-block img-right' src='assets/images/Guardians_of_the_galaxy_vol2_baby_groot.png'>", "<img class='center-block img-right' src='assets/images/Guardians-of-the-Galaxy-Vol.-2-Yondu-Michael-Rooker-Maroon-Coat-450x600.png'>", "<img class='center-block img-right' src='assets/images/544e0228f4034776c42519767b9e0c01.png'>", "<img class='center-block img-right' src='assets/images/Guardians-of-The-Galaxy-PNG-Photos.png'>"];
+    var imageArray = ["<img class='center-block img-right'src='assets/images/2e68c2a499536c5dd956816893d3af26.png'>" , "<img class='center-block img-right'src='assets/images/Gamora_Profile(1).png'>", "<img class='center-block img-right'src='assets/images/guardians-of-the-galaxy-clipart-3.png'>", "<img class='center-block img-right'src='assets/images/kisspng-rocket-raccoon-baby-groot-gamora-marvel-comics-guardians-of-the-galaxy-5ac6fc0461e4c7.203584221522990084401.png'>", "<img class='center-block img-right' src='assets/images/Guardians_of_the_galaxy_vol2_baby_groot.png'>", "<img class='center-block img-right' src='assets/images/hot-toys-marvel-guardians-of-the-galaxy-2-yondu-sixth-scale-toyslife.png'>", "<img class='center-block img-right' src='assets/images/544e0228f4034776c42519767b9e0c01.png'>", "<img class='center-block img-right' src='assets/images/Guardians-of-The-Galaxy-PNG-Photos.png'>"];
     var correctAnswers = ["B. Terra", "C. Green", "D. Ronan the Accuser", "B. Raccoon", "A. I am Groot", "C. Arrow", "A. Star Lord", "A. 5"];
     var questionCounter = 0;
     var selecterAnswer;
@@ -123,5 +123,5 @@ $(document).ready(function() {
     var correctTally = 0;
     var incorrectTally = 0;
     var unansweredTally = 0;
-    var clickSound = new Audio("sound/button-click.mp3");
+    var clickSound = new Audio("assets/sound/Button-SoundBible.com-1420500901.mp3");
    
